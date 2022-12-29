@@ -1,7 +1,7 @@
-namespace Cards;
+namespace Cards.Models;
 public static class CardExtensions
 {
-    public static List<Card> Shuffle(this List<Card> cards, uint shuffles = 0)
+    public static List<T> Shuffle<T>(this List<T> cards, uint shuffles = 0) where T : ICard
     {
         Random rng = new();
         int n = cards.Count;
@@ -22,9 +22,9 @@ public static class CardExtensions
         return cards;
     }
 
-    public static Card Deal(this List<Card> cards)
+    public static T Deal<T>(this List<T> cards) where T : ICard
     {
-        Card card = cards[0];
+        T card = cards[0];
         cards.RemoveAt(0);
         return card;
     }
