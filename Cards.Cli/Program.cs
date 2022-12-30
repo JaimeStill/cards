@@ -1,5 +1,8 @@
 ﻿using Cards.Models;
 
+Console.WriteLine("Standard Cards");
+Console.WriteLine("--------------");
+
 Random rng = new();
 
 List<StandardCard> deck = StandardCard
@@ -9,7 +12,8 @@ List<StandardCard> deck = StandardCard
 List<StandardCard> p1 = new();
 List<StandardCard> p2 = new();
 
-for (int i = 0; i < 7; i++) {
+for (int i = 0; i < 7; i++)
+{
     p1.Add(deck.Deal());
     p2.Add(deck.Deal());
 }
@@ -23,3 +27,43 @@ p2.ForEach(card => Console.WriteLine(card.Name));
 Console.WriteLine();
 
 Console.WriteLine($"Deck Size: {deck.Count}");
+Console.WriteLine();
+
+Console.WriteLine("Tarot Cards");
+Console.WriteLine("-----------");
+
+List<MajorTarotCard> tarot = MajorArcana.Build().Shuffle(6);
+MajorTarotCard past = tarot.Deal();
+MajorTarotCard present = tarot.Deal();
+MajorTarotCard future = tarot.Deal();
+
+Console.WriteLine("Past:");
+PrintTarotResult(past);
+Console.WriteLine();
+
+Console.WriteLine("Present:");
+PrintTarotResult(present);
+Console.WriteLine();
+
+Console.WriteLine("Future:");
+PrintTarotResult(future);
+Console.WriteLine();
+
+static void PrintTarotResult<T>(T card) where T : TarotCard
+{
+    Console.WriteLine($"Card: {card.Name}");
+    Console.WriteLine($"Orientation: {(card.IsUpright ? "Upright" : "Reversed")}");
+
+    if (card is MajorTarotCard major)
+    {
+        Console.WriteLine($"Element: {major.Element.Name}");
+        Console.WriteLine($"Astrology: {major.Astrology.Name}"); 
+    }
+    else if (card is MinorTarotCard minor)
+    {
+        Console.WriteLine($"Element: {minor.Suit.Element}");
+        Console.WriteLine($"Astrology: {string.Join(',', minor.Zodiac.Select(x => x.Name))}");
+    }
+
+    Console.WriteLine($"Keywords: {card.Keywords}");
+}

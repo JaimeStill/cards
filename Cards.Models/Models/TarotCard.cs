@@ -5,6 +5,7 @@ public abstract class TarotCard : ICard
     public abstract string Name { get; }
     public string[] Upright { get; }
     public string[] Reversed { get; }
+    public bool IsUpright { get; }
 
     public TarotCard(
         string[] upright,
@@ -13,7 +14,13 @@ public abstract class TarotCard : ICard
     {
         Upright = upright;
         Reversed = reversed;
+
+        IsUpright = new Random().Next() % 2 == 0;
     }
+
+    public string Keywords => IsUpright
+        ? string.Join(',', Upright)
+        : string.Join(',', Reversed);
 }
 
 public class MinorTarotCard : TarotCard
@@ -53,11 +60,13 @@ public class MajorTarotCard : TarotCard
     public override string Name { get; }
     public int Value { get; }
     public TarotAstrology Astrology { get; }
+    public TarotElement Element { get; }
 
     public MajorTarotCard(
         string name,
         int value,
         TarotAstrology astrology,
+        TarotElement element,
         string[] upright,
         string[] reversed
     ) : base(upright, reversed)
@@ -65,5 +74,6 @@ public class MajorTarotCard : TarotCard
         Name = name;
         Value = value;
         Astrology = astrology;
+        Element = element;
     }
 }
