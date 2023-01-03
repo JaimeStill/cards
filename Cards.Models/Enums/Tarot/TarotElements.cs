@@ -2,7 +2,16 @@ namespace Cards.Models;
 
 public static class TarotElements
 {
+    public static List<TarotElement> Elements() => new()
+    {
+        Air,
+        Earth,
+        Fire,
+        Water
+    };
+
     public static TarotElement Air => new(
+        1,
         "Air",
         TarotPolarity.Active,
         "Logic", "Ideas", "Intellect", "Communication",
@@ -10,6 +19,7 @@ public static class TarotElements
     );
 
     public static TarotElement Earth => new(
+        2,
         "Earth",
         TarotPolarity.Passive,
         "Physical", "Nature", "Health", "Stability", "Reliability",
@@ -17,6 +27,7 @@ public static class TarotElements
     );
 
     public static TarotElement Fire => new(
+        3,
         "Fire",
         TarotPolarity.Active,
         "Energy", "Passion", "Action", "Inspiration", "Drive",
@@ -24,6 +35,7 @@ public static class TarotElements
     );
 
     public static TarotElement Water => new(
+        4,
         "Water",
         TarotPolarity.Passive,
         "Emotions", "Feelings", "Relationships", "Intuition",

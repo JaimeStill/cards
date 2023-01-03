@@ -2,7 +2,33 @@ namespace Cards.Models;
 
 public static class TarotZodiacs
 {
+    public static List<TarotZodiac> Zodiacs() => new()
+    {
+        Aries,
+        Taurus,
+        Gemini,
+        Cancer,
+        Leo,
+        Virgo,
+        Libra,
+        Scorpio,
+        Sagittarius,
+        Capricorn,
+        Aquarius,
+        Pisces
+    };
+
+    public static IEnumerable<TarotZodiac> GetByElement(TarotElement element) =>
+        Zodiacs().Where(x => x.ElementId == element.Id);
+
+    public static IEnumerable<TarotZodiac> GetByModality(TarotModality modality) =>
+        Zodiacs().Where(x => x.ModalityId == modality.Id);
+
+    public static IEnumerable<TarotZodiac> GetByRuler(TarotPlanet ruler) =>
+        Zodiacs().Where(x => x.RulerId == ruler.Id);
+
     public static TarotZodiac Aries => new(
+        11,
         "Aries",
         new DateOnly(DateTime.Now.Year, 3, 19),
         new DateOnly(DateTime.Now.Year, 4, 19),
@@ -20,6 +46,7 @@ public static class TarotZodiacs
     );
 
     public static TarotZodiac Taurus => new(
+        12,
         "Taurus",
         new DateOnly(DateTime.Now.Year, 4, 20),
         new DateOnly(DateTime.Now.Year, 5, 20),
@@ -37,6 +64,7 @@ public static class TarotZodiacs
     );
 
     public static TarotZodiac Gemini => new(
+        13,
         "Gemini",
         new DateOnly(DateTime.Now.Year, 5, 21),
         new DateOnly(DateTime.Now.Year, 6, 20),
@@ -54,6 +82,7 @@ public static class TarotZodiacs
     );
 
     public static TarotZodiac Cancer => new(
+        14,
         "Cancer",
         new DateOnly(DateTime.Now.Year, 6, 21),
         new DateOnly(DateTime.Now.Year, 7, 22),
@@ -71,6 +100,7 @@ public static class TarotZodiacs
     );
 
     public static TarotZodiac Leo => new(
+        15,
         "Leo",
         new DateOnly(DateTime.Now.Year, 7, 23),
         new DateOnly(DateTime.Now.Year, 8, 22),
@@ -88,6 +118,7 @@ public static class TarotZodiacs
     );
 
     public static TarotZodiac Virgo => new(
+        16,
         "Virgo",
         new DateOnly(DateTime.Now.Year, 8, 23),
         new DateOnly(DateTime.Now.Year, 9, 22),
@@ -105,6 +136,7 @@ public static class TarotZodiacs
     );
 
     public static TarotZodiac Libra => new(
+        17,
         "Libra",
         new DateOnly(DateTime.Now.Year, 9, 23),
         new DateOnly(DateTime.Now.Year, 10, 22),
@@ -122,6 +154,7 @@ public static class TarotZodiacs
     );
 
     public static TarotZodiac Scorpio => new(
+        18,
         "Scorpio",
         new DateOnly(DateTime.Now.Year, 10, 23),
         new DateOnly(DateTime.Now.Year, 11, 21),
@@ -139,6 +172,7 @@ public static class TarotZodiacs
     );
 
     public static TarotZodiac Sagittarius => new(
+        19,
         "Sagittarius",
         new DateOnly(DateTime.Now.Year, 11, 22),
         new DateOnly(DateTime.Now.Year, 12, 21),
@@ -156,6 +190,7 @@ public static class TarotZodiacs
     );
 
     public static TarotZodiac Capricorn => new(
+        20,
         "Capricorn",
         new DateOnly(DateTime.Now.Year, 12, 22),
         new DateOnly(DateTime.Now.Year, 1, 19),
@@ -173,6 +208,7 @@ public static class TarotZodiacs
     );
 
     public static TarotZodiac Aquarius => new(
+        21,
         "Aquarius",
         new DateOnly(DateTime.Now.Year, 1, 20),
         new DateOnly(DateTime.Now.Year, 2, 18),
@@ -190,6 +226,7 @@ public static class TarotZodiacs
     );
 
     public static TarotZodiac Pisces => new(
+        22,
         "Pisces",
         new DateOnly(DateTime.Now.Year, 2, 19),
         new DateOnly(DateTime.Now.Year, 3, 20),

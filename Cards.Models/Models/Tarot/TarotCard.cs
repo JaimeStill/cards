@@ -1,6 +1,6 @@
 namespace Cards.Models;
 
-public abstract class TarotCard : ICard
+public abstract class TarotCard : TarotBase, ICard
 {
     public abstract string Name { get; }
     public string[] Upright { get; }
@@ -8,9 +8,10 @@ public abstract class TarotCard : ICard
     public bool IsUpright { get; }
 
     public TarotCard(
+        int id,
         string[] upright,
         string[] reversed
-    )
+    ) : base(id)
     {
         Upright = upright;
         Reversed = reversed;
@@ -19,28 +20,28 @@ public abstract class TarotCard : ICard
     }
 
     public string Keywords => IsUpright
-        ? string.Join(',', Upright)
-        : string.Join(',', Reversed);
+        ? string.Join(", ", Upright)
+        : string.Join(", ", Reversed);
 }
 
 public class MinorTarotCard : TarotCard
 {
+    public int SuitId { get; }
     public int Value { get; }
-    public TarotSuit Suit { get; }
-    public TarotZodiac[] Zodiac { get; }
 
     public MinorTarotCard(
+        int id,
         int value,
         TarotSuit suit,
-        TarotZodiac[] zodiac,
         string[] upright,
         string[] reversed
-    ) : base(upright, reversed)
+    ) : base(id, upright, reversed)
     {
         Value = value;
-        Suit = suit;
-        Zodiac = zodiac;
+        SuitId = suit.Id;
     }
+
+    public TarotSuit Suit => TarotSuits.Suits().Get(SuitId);
 
     private string ValueName => Value switch
     {
@@ -58,9 +59,10 @@ public class MinorTarotCard : TarotCard
 public class MajorTarotCard : TarotCard
 {
     public override string Name { get; }
+    public int AstrologyId { get; }
+    public int ElementId { get; }
     public int Value { get; }
-    public TarotAstrology Astrology { get; }
-    public TarotElement Element { get; }
+    public string AstrologyType { get; }
 
     public MajorTarotCard(
         string name,
@@ -69,11 +71,15 @@ public class MajorTarotCard : TarotCard
         TarotElement element,
         string[] upright,
         string[] reversed
-    ) : base(upright, reversed)
+    ) : base(value, upright, reversed)
     {
         Name = name;
         Value = value;
-        Astrology = astrology;
-        Element = element;
+        AstrologyId = astrology.Id;
+        AstrologyType = astrology.Type;
+        ElementId = element.Id;
     }
+
+    public TarotAstrology Astrology => TarotAstrology.Get(AstrologyId, AstrologyType);
+    public TarotElement Element => TarotElements.Elements().Get(ElementId);
 }

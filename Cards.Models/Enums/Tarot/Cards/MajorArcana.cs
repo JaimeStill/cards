@@ -2,7 +2,7 @@ namespace Cards.Models;
 
 public static class MajorArcana
 {
-    public static List<MajorTarotCard> Build() => new()
+    public static List<MajorTarotCard> Cards => new()
     {
         TheFool,
         TheMagician,
@@ -27,6 +27,13 @@ public static class MajorArcana
         Judgement,
         TheWorld
     };
+
+    public static IEnumerable<MajorTarotCard> GetByAstrology(TarotAstrology astrology) =>
+        Cards.Where(x => x.AstrologyId == astrology.Id);
+
+    public static IEnumerable<MajorTarotCard> GetByElement(TarotElement element) =>
+        Cards.Where(x => x.ElementId == element.Id);    
+
 
     public static MajorTarotCard TheFool => new(
         "The Fool",
