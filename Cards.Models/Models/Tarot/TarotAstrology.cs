@@ -11,13 +11,13 @@ public abstract class TarotAstrology : TarotBase
         Type = type;
     }
 
-    public IEnumerable<MajorTarotCard> Cards() =>
+    public IEnumerable<MajorTarotCard> Cards =>
         MajorArcana.GetByAstrology(this);
 
     public static TarotAstrology Get(int id, string type) => type switch
     {
-        "Planet" => TarotPlanets.Planets().Get(id),
-        "Zodiac" => TarotZodiacs.Zodiacs().Get(id),
+        "Planet" => TarotPlanets.Planets.Get(id),
+        "Zodiac" => TarotZodiacs.Zodiacs.Get(id),
         _ => throw new ArgumentOutOfRangeException($"{type} is not an Astrology type")
     };
 }

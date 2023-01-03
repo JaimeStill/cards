@@ -2,7 +2,7 @@ namespace Cards.Models;
 
 public static class TarotModalities
 {
-    public static List<TarotModality> Modalities() => new()
+    public static List<TarotModality> Modalities => new()
     {
         Cardinal,
         Fixed,

@@ -2,7 +2,7 @@ namespace Cards.Models;
 
 public static class TarotSuits
 {
-    public static List<TarotSuit> Suits() => new()
+    public static List<TarotSuit> Suits => new()
     {
         Cups,
         Pentacles,
@@ -11,7 +11,7 @@ public static class TarotSuits
     };
 
     public static TarotSuit GetByElement(TarotElement element) =>
-        Suits().First(x => x.ElementId == element.Id);
+        Suits.First(x => x.ElementId == element.Id);
 
     public static TarotSuit Cups => new(
         1,
@@ -33,7 +33,7 @@ public static class TarotSuits
 
     public static TarotSuit Wands => new(
         4,
-        "Fire",
+        "Wands",
         TarotElements.Fire
     );
 }

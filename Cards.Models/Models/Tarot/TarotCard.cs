@@ -4,6 +4,8 @@ public abstract class TarotCard : TarotBase, ICard
 {
     public abstract string Name { get; }
     public string Type { get; }
+    public string Image { get; }
+    public string Link { get; }
     public string[] Upright { get; }
     public string[] Reversed { get; }
     public bool IsUpright { get; }
@@ -11,6 +13,8 @@ public abstract class TarotCard : TarotBase, ICard
     public TarotCard(
         int id,
         string type,
+        string image,
+        string link,
         string[] upright,
         string[] reversed
     ) : base(id)
@@ -18,6 +22,8 @@ public abstract class TarotCard : TarotBase, ICard
         Upright = upright;
         Reversed = reversed;
         Type = type;
+        Image = image;
+        Link = link;
 
         IsUpright = new Random().Next() % 2 == 0;
     }
@@ -26,13 +32,13 @@ public abstract class TarotCard : TarotBase, ICard
         ? string.Join(", ", Upright)
         : string.Join(", ", Reversed);
 
-    public static List<TarotCard> Deck() =>
+    public static List<TarotCard> Deck =>
         MajorArcana
-            .Cards()
+            .Cards
             .Cast<TarotCard>()
             .Concat(
                 MinorArcana
-                    .Cards()
+                    .Cards
                     .Cast<TarotCard>()
             )
             .ToList();
@@ -47,15 +53,17 @@ public class MinorTarotCard : TarotCard
         int id,
         int value,
         TarotSuit suit,
+        string image,
+        string link,
         string[] upright,
         string[] reversed
-    ) : base(id, "Minor", upright, reversed)
+    ) : base(id, "Minor", image, link, upright, reversed)
     {
         Value = value;
         SuitId = suit.Id;
     }
 
-    public TarotSuit Suit => TarotSuits.Suits().Get(SuitId);
+    public TarotSuit Suit => TarotSuits.Suits.Get(SuitId);
 
     private string ValueName => Value switch
     {
@@ -67,7 +75,7 @@ public class MinorTarotCard : TarotCard
         _ => Value.ToString()
     };
     public override string Name =>
-        $"{ValueName} of {Suit}";
+        $"{ValueName} of {Suit.Name}";
 }
 
 public class MajorTarotCard : TarotCard
@@ -83,9 +91,11 @@ public class MajorTarotCard : TarotCard
         int value,
         TarotAstrology astrology,
         TarotElement element,
+        string image,
+        string link,
         string[] upright,
         string[] reversed
-    ) : base(value, "Major", upright, reversed)
+    ) : base(value, "Major", image, link, upright, reversed)
     {
         Name = name;
         Value = value;
@@ -95,5 +105,5 @@ public class MajorTarotCard : TarotCard
     }
 
     public TarotAstrology Astrology => TarotAstrology.Get(AstrologyId, AstrologyType);
-    public TarotElement Element => TarotElements.Elements().Get(ElementId);
+    public TarotElement Element => TarotElements.Elements.Get(ElementId);
 }

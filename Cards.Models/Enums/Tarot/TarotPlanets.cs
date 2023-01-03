@@ -2,7 +2,7 @@ namespace Cards.Models;
 
 public static class TarotPlanets
 {
-    public static List<TarotPlanet> Planets() => new()
+    public static List<TarotPlanet> Planets => new()
     {
         Jupiter,
         Mars,

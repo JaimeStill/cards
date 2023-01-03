@@ -11,5 +11,5 @@ public class TarotModality : TarotBase
         Keywords = keywords;
     }
 
-    public IEnumerable<TarotZodiac> Zodiacs() => TarotZodiacs.GetByModality(this);
+    public IEnumerable<TarotZodiac> Zodiacs => TarotZodiacs.GetByModality(this);
 }

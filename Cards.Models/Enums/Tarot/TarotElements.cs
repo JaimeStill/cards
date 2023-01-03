@@ -2,7 +2,7 @@ namespace Cards.Models;
 
 public static class TarotElements
 {
-    public static List<TarotElement> Elements() => new()
+    public static List<TarotElement> Elements => new()
     {
         Air,
         Earth,

@@ -32,10 +32,10 @@ Console.WriteLine();
 Console.WriteLine("Tarot Cards");
 Console.WriteLine("-----------");
 
-List<MajorTarotCard> tarot = MajorArcana.Cards().Shuffle(6);
-MajorTarotCard past = tarot.Deal();
-MajorTarotCard present = tarot.Deal();
-MajorTarotCard future = tarot.Deal();
+List<TarotCard> tarot = TarotCard.Deck.Shuffle(6);
+TarotCard past = tarot.Deal();
+TarotCard present = tarot.Deal();
+TarotCard future = tarot.Deal();
 
 Console.WriteLine("Past:");
 PrintTarotResult(past);
@@ -61,9 +61,11 @@ static void PrintTarotResult<T>(T card) where T : TarotCard
     }
     else if (card is MinorTarotCard minor)
     {
-        Console.WriteLine($"Element: {minor.Suit.Element}");
-        Console.WriteLine($"Zodiacs: {string.Join(", ", minor.Suit.Element.Zodiacs().Select(x => x.Name))}");
+        Console.WriteLine($"Element: {minor.Suit.Element.Name}");
+        Console.WriteLine($"Zodiacs: {string.Join(", ", minor.Suit.Element.Zodiacs.Select(x => x.Name))}");
     }
 
     Console.WriteLine($"Keywords: {card.Keywords}");
+    Console.WriteLine($"Image: {card.Image}");
+    Console.WriteLine($"Link: {card.Link}");
 }

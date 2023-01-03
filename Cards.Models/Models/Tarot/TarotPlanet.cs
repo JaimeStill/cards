@@ -18,5 +18,5 @@ public class TarotPlanet : TarotAstrology
         Keywords = keywords;
     }
 
-    public IEnumerable<TarotZodiac> Zodiacs() => TarotZodiacs.GetByRuler(this);
+    public IEnumerable<TarotZodiac> Zodiacs => TarotZodiacs.GetByRuler(this);
 }

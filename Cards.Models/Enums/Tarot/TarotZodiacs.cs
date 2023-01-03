@@ -2,7 +2,7 @@ namespace Cards.Models;
 
 public static class TarotZodiacs
 {
-    public static List<TarotZodiac> Zodiacs() => new()
+    public static List<TarotZodiac> Zodiacs => new()
     {
         Aries,
         Taurus,
@@ -19,13 +19,13 @@ public static class TarotZodiacs
     };
 
     public static IEnumerable<TarotZodiac> GetByElement(TarotElement element) =>
-        Zodiacs().Where(x => x.ElementId == element.Id);
+        Zodiacs.Where(x => x.ElementId == element.Id);
 
     public static IEnumerable<TarotZodiac> GetByModality(TarotModality modality) =>
-        Zodiacs().Where(x => x.ModalityId == modality.Id);
+        Zodiacs.Where(x => x.ModalityId == modality.Id);
 
     public static IEnumerable<TarotZodiac> GetByRuler(TarotPlanet ruler) =>
-        Zodiacs().Where(x => x.RulerId == ruler.Id);
+        Zodiacs.Where(x => x.RulerId == ruler.Id);
 
     public static TarotZodiac Aries => new(
         11,

@@ -20,6 +20,6 @@ public class TarotElement : TarotBase
 
     public TarotSuit Suit => TarotSuits.GetByElement(this);
 
-    public IEnumerable<MajorTarotCard> Cards() => MajorArcana.GetByElement(this);
-    public IEnumerable<TarotZodiac> Zodiacs() => TarotZodiacs.GetByElement(this);
+    public IEnumerable<MajorTarotCard> Cards => MajorArcana.GetByElement(this);
+    public IEnumerable<TarotZodiac> Zodiacs => TarotZodiacs.GetByElement(this);
 }
