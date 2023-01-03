@@ -32,7 +32,7 @@ Console.WriteLine();
 Console.WriteLine("Tarot Cards");
 Console.WriteLine("-----------");
 
-List<MajorTarotCard> tarot = MajorArcana.Cards.Shuffle(6);
+List<MajorTarotCard> tarot = MajorArcana.Cards().Shuffle(6);
 MajorTarotCard past = tarot.Deal();
 MajorTarotCard present = tarot.Deal();
 MajorTarotCard future = tarot.Deal();

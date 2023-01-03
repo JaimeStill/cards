@@ -13,8 +13,10 @@ public static class Wands
         1,
         TarotSuits.Wands,
         new string[]{
+            "Creation", "Willpower", "Inspiration", "Desire"
         },
         new string[]{
+            "Lack of Energy", "Lack of Passion", "Boredom"
         }
     );
 
@@ -23,8 +25,10 @@ public static class Wands
         2,
         TarotSuits.Wands,
         new string[]{
+            "Planning", "Making Decisions", "Leaving Home"
         },
         new string[]{
+            "Fear of Change", "Playing it Safe", "Bad Planning"
         }
     );
 
@@ -33,8 +37,10 @@ public static class Wands
         3,
         TarotSuits.Wands,
         new string[]{
+            "Looking Ahead", "Expansion", "Rapid Growth"
         },
         new string[]{
+            "Obstacles", "Delays", "Frustration"
         }
     );
 
@@ -43,8 +49,10 @@ public static class Wands
         4,
         TarotSuits.Wands,
         new string[]{
+            "Community", "Home", "Celebration"
         },
         new string[]{
+            "Lack of Support", "Transience", "Home Conflicts"
         }
     );
 
@@ -53,8 +61,10 @@ public static class Wands
         5,
         TarotSuits.Wands,
         new string[]{
+            "Competition", "Conflict", "Rivalry"
         },
         new string[]{
+            "Avoiding Conflict", "Respect Differences"
         }
     );
 
@@ -63,8 +73,10 @@ public static class Wands
         6,
         TarotSuits.Wands,
         new string[]{
+            "Victory", "Success", "Public Reward"
         },
         new string[]{
+            "Excess Pride", "Lack of Recognition", "Punishment"
         }
     );
 
@@ -73,8 +85,10 @@ public static class Wands
         7,
         TarotSuits.Wands,
         new string[]{
+            "Perseverance", "Mount Defense", "Maintaining Control"
         },
         new string[]{
+            "Giving Up", "No Confidence", "Overwhelmed"
         }
     );
 
@@ -83,8 +97,10 @@ public static class Wands
         8,
         TarotSuits.Wands,
         new string[]{
+            "Rapid Action", "Movement", "Quick Decisions"
         },
         new string[]{
+            "Panic", "Waiting", "Slowing Down"
         }
     );
 
@@ -93,8 +109,10 @@ public static class Wands
         9,
         TarotSuits.Wands,
         new string[]{
+            "Resilience", "Grit", "Last Stand"
         },
         new string[]{
+            "Exhaustion", "Fatigue", "Unsure Motivations"
         }
     );
 
@@ -103,8 +121,10 @@ public static class Wands
         10,
         TarotSuits.Wands,
         new string[]{
+            "Accomplishment", "Responsibility", "Burden"
         },
         new string[]{
+            "Can't Delegate", "Overstressed", "Burnt Out"
         }
     );
 
@@ -113,8 +133,10 @@ public static class Wands
         11,
         TarotSuits.Wands,
         new string[]{
+            "Exploration", "Excitement", "Freedom"
         },
         new string[]{
+            "Lack of Direction", "Procrastination", "Creating Conflict"
         }
     );
 
@@ -123,8 +145,10 @@ public static class Wands
         12,
         TarotSuits.Wands,
         new string[]{
+            "Action", "Adventure", "Fearlessness"
         },
         new string[]{
+            "Anger", "Impulsivity", "Recklessness"
         }
     );
 
@@ -133,8 +157,10 @@ public static class Wands
         13,
         TarotSuits.Wands,
         new string[]{
+            "Courage", "Determination", "Joy"
         },
         new string[]{
+            "Selfishness", "Jealousy", "Insecurity"
         }
     );
 
@@ -143,8 +169,10 @@ public static class Wands
         14,
         TarotSuits.Wands,
         new string[]{
+            "Big Picture", "Leader", "Overcoming Challenges"
         },
         new string[]{
+            "Impulsive", "Overbearing", "Impossible Expectations"
         }
     );
 }

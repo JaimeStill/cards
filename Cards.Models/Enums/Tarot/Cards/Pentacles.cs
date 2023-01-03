@@ -13,8 +13,10 @@ public static class Pentacles
         1,
         TarotSuits.Pentacles,
         new string[]{
+            "Opportunity", "Prosperity", "New Venture"
         },
         new string[]{
+            "Lost Opportunity", "Missed Chance", "Bad Investment"
         }
     );
 
@@ -23,8 +25,10 @@ public static class Pentacles
         2,
         TarotSuits.Pentacles,
         new string[]{
+            "Balancing Decisions", "Priorties", "Adapting to Change"
         },
         new string[]{
+            "Loss of Balance", "Disorganized", "Overwhelmed"
         }
     );
 
@@ -33,8 +37,10 @@ public static class Pentacles
         3,
         TarotSuits.Pentacles,
         new string[]{
+            "Teamwork", "Collaboration", "Building"
         },
         new string[]{
+            "Lack of Teamwork", "Disorganized", "Group Conflict"
         }
     );
 
@@ -43,8 +49,10 @@ public static class Pentacles
         4,
         TarotSuits.Pentacles,
         new string[]{
+            "Conservation", "Security", "Frugality"
         },
         new string[]{
+            "Greediness", "Stinginess", "Possessiveness"
         }
     );
 
@@ -53,8 +61,10 @@ public static class Pentacles
         5,
         TarotSuits.Pentacles,
         new string[]{
+            "Need", "Poverty", "Insecurity"
         },
         new string[]{
+            "Recovery", "Charity", "Improvement"
         }
     );
 
@@ -63,8 +73,10 @@ public static class Pentacles
         6,
         TarotSuits.Pentacles,
         new string[]{
+            "Charity", "Generosity", "Sharing"
         },
         new string[]{
+            "Strings Attached", "Stinginess", "Power and Domination"
         }
     );
 
@@ -73,8 +85,10 @@ public static class Pentacles
         7,
         TarotSuits.Pentacles,
         new string[]{
+            "Hard Work", "Perseverance", "Diligence"
         },
         new string[]{
+            "Work without Results", "Distractions", "Lack of Rewards"
         }
     );
 
@@ -83,8 +97,10 @@ public static class Pentacles
         8,
         TarotSuits.Pentacles,
         new string[]{
+            "Diligence", "Passion", "High Standards"
         },
         new string[]{
+            "No Passion", "Uninspired", "No Motivation"
         }
     );
 
@@ -93,8 +109,10 @@ public static class Pentacles
         9,
         TarotSuits.Pentacles,
         new string[]{
+            "Fruits of Labor", "Spending", "Rewards"
         },
         new string[]{
+            "Living Beyond Means", "Obsession With Work", "False Success"
         }
     );
 
@@ -103,8 +121,10 @@ public static class Pentacles
         10,
         TarotSuits.Pentacles,
         new string[]{
+            "Legacy", "Inheritance", "Culmination"
         },
         new string[]{
+            "Fleeting Success", "Lack of Stability", "Lack of Resources"
         }
     );
 
@@ -113,8 +133,10 @@ public static class Pentacles
         11,
         TarotSuits.Pentacles,
         new string[]{
+            "Ambition", "Desire", "Diligence"
         },
         new string[]{
+            "Lack of Commitment", "Greediness", "Laziness"
         }
     );
 
@@ -123,8 +145,10 @@ public static class Pentacles
         12,
         TarotSuits.Pentacles,
         new string[]{
+            "Efficiency", "Hard Work", "Responsibility"
         },
         new string[]{
+            "Laziness", "Obsessed with Work", "Work without Reward"
         }
     );
 
@@ -133,8 +157,10 @@ public static class Pentacles
         13,
         TarotSuits.Pentacles,
         new string[]{
+            "Practicality", "Creature Comforts", "Financial Security"
         },
         new string[]{
+            "Self-Centeredness", "Jealousy", "Smothering"
         }
     );
 
@@ -143,8 +169,10 @@ public static class Pentacles
         14,
         TarotSuits.Pentacles,
         new string[]{
+            "Abundance", "Propserity", "Security"
         },
         new string[]{
+            "Greed", "Indulgence", "Sensuality"
         }
     );
 }

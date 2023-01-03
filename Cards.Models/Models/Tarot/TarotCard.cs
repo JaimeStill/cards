@@ -3,18 +3,21 @@ namespace Cards.Models;
 public abstract class TarotCard : TarotBase, ICard
 {
     public abstract string Name { get; }
+    public string Type { get; }
     public string[] Upright { get; }
     public string[] Reversed { get; }
     public bool IsUpright { get; }
 
     public TarotCard(
         int id,
+        string type,
         string[] upright,
         string[] reversed
     ) : base(id)
     {
         Upright = upright;
         Reversed = reversed;
+        Type = type;
 
         IsUpright = new Random().Next() % 2 == 0;
     }
@@ -22,6 +25,17 @@ public abstract class TarotCard : TarotBase, ICard
     public string Keywords => IsUpright
         ? string.Join(", ", Upright)
         : string.Join(", ", Reversed);
+
+    public static List<TarotCard> Deck() =>
+        MajorArcana
+            .Cards()
+            .Cast<TarotCard>()
+            .Concat(
+                MinorArcana
+                    .Cards()
+                    .Cast<TarotCard>()
+            )
+            .ToList();
 }
 
 public class MinorTarotCard : TarotCard
@@ -35,7 +49,7 @@ public class MinorTarotCard : TarotCard
         TarotSuit suit,
         string[] upright,
         string[] reversed
-    ) : base(id, upright, reversed)
+    ) : base(id, "Minor", upright, reversed)
     {
         Value = value;
         SuitId = suit.Id;
@@ -71,7 +85,7 @@ public class MajorTarotCard : TarotCard
         TarotElement element,
         string[] upright,
         string[] reversed
-    ) : base(value, upright, reversed)
+    ) : base(value, "Major", upright, reversed)
     {
         Name = name;
         Value = value;

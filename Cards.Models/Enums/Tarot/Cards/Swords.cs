@@ -13,8 +13,10 @@ public static class Swords
         1,
         TarotSuits.Swords,
         new string[]{
+            "Breakthrough", "Clarity", "Sharp Mind"
         },
         new string[]{
+            "Confusion", "Brutality", "Chaos"
         }
     );
 
@@ -23,8 +25,11 @@ public static class Swords
         2,
         TarotSuits.Swords,
         new string[]{
+            "Difficult Choices", "Indecision", "Stalemate"
+
         },
         new string[]{
+            "Lesser of Two Evils", "No Right Choice", "Confusion"
         }
     );
 
@@ -33,8 +38,10 @@ public static class Swords
         3,
         TarotSuits.Swords,
         new string[]{
+            "Heartbreak", "Suffering", "Grief"
         },
         new string[]{
+            "Recovery", "Forgiveness", "Moving On"
         }
     );
 
@@ -43,8 +50,10 @@ public static class Swords
         4,
         TarotSuits.Swords,
         new string[]{
+            "Rest", "Restoration", "Contemplation"
         },
         new string[]{
+            "Restlessness", "Burnout", "Stress"
         }
     );
 
@@ -53,8 +62,10 @@ public static class Swords
         5,
         TarotSuits.Swords,
         new string[]{
+            "Unbridled Ambition", "Win at All Costs", "Sneakiness"
         },
         new string[]{
+            "Resentment", "Desire to Reconcile", "Desire to Forgive"
         }
     );
 
@@ -63,8 +74,10 @@ public static class Swords
         6,
         TarotSuits.Swords,
         new string[]{
+            "Transition", "Leaving Behind", "Moving On"
         },
         new string[]{
+            "Emotional Baggage", "Unresolved Issues", "Resisting Transition"
         }
     );
 
@@ -73,8 +86,10 @@ public static class Swords
         7,
         TarotSuits.Swords,
         new string[]{
+            "Deception", "Trickery", "Tactics & Strategy"
         },
         new string[]{
+            "Coming Clean", "Rethinking Approach", "Deception"
         }
     );
 
@@ -83,8 +98,10 @@ public static class Swords
         8,
         TarotSuits.Swords,
         new string[]{
+            "Imprisonment", "Entrapment", "Self-Victimization"
         },
         new string[]{
+            "Self-Acceptance", "New Perspective", "Freedom"
         }
     );
 
@@ -93,8 +110,10 @@ public static class Swords
         9,
         TarotSuits.Swords,
         new string[]{
+            "Anxiety", "Hopelessness", "Trauma"
         },
         new string[]{
+            "Hope", "Reaching Out", "Despair"
         }
     );
 
@@ -103,8 +122,10 @@ public static class Swords
         10,
         TarotSuits.Swords,
         new string[]{
+            "Failure", "Collapse", "Defeat"
         },
         new string[]{
+            "Can't Get Worse", "Only Upwards", "Inevitable End"
         }
     );
 
@@ -113,8 +134,10 @@ public static class Swords
         11,
         TarotSuits.Swords,
         new string[]{
+            "Curiosity", "Restlessness", "Mental Energy"
         },
         new string[]{
+            "Deception", "Manipulation", "All Talk"
         }
     );
 
@@ -123,8 +146,10 @@ public static class Swords
         12,
         TarotSuits.Swords,
         new string[]{
+            "Action", "Impulsiveness", "Defending Beliefs"
         },
         new string[]{
+            "No Direction", "Disregarding Consequences", "Unpredictability"
         }
     );
 
@@ -133,8 +158,10 @@ public static class Swords
         13,
         TarotSuits.Swords,
         new string[]{
+            "Complexity", "Perceptiveness", "Clear Mindedness"
         },
         new string[]{
+            "Cold Hearted", "Cruel", "Bitterness"
         }
     );
 
@@ -143,8 +170,10 @@ public static class Swords
         14,
         TarotSuits.Swords,
         new string[]{
+            "Head Over Heart", "Discipline", "Truth"
         },
         new string[]{
+            "Manipulative", "Cruel", "Weakness"
         }
     );
 }
